@@ -1,0 +1,53 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "mcdw:dagger_shear_dagger",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_backstabber",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_dagger",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_fangs_of_frost",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_moon",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_swift_striker",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_the_beginning",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_the_end",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_void_touched_blade",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_tempest_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_eternal_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_soul_knife",
+      "required": false
+    }
+  ]
+}

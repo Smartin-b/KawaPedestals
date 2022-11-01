@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=north": { "model": "pedestal:block/wall_hanger", "uvlock": true },
+    "facing=east":  { "model": "pedestal:block/wall_hanger", "y":  90, "uvlock": true },
+    "facing=south": { "model": "pedestal:block/wall_hanger", "y": 180, "uvlock": true },
+    "facing=west":  { "model": "pedestal:block/wall_hanger", "y": 270, "uvlock": true }
+  }
+}
+

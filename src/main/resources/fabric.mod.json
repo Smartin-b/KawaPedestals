@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pedestal",
+  "version": "${version}",
+  "name": "Pedestal",
+  "description": "A simple Pedestal for Kawa",
+  "authors": [
+    "Smartin"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/pedestal/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "smartin.pedestal.client.PedestalClient"
+    ],
+    "main": [
+      "smartin.pedestal.Pedestal"
+    ]
+  },
+  "mixins": [
+    "pedestal.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
