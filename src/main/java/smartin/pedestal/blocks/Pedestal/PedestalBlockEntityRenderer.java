@@ -38,7 +38,7 @@ public class PedestalBlockEntityRenderer implements BlockEntityRenderer<Pedestal
         if(stack.isIn(ModTags.BIG_SWORD))
             matrix.translate(0.0D, 0.35D, 0.0D);
         matrix.translate(0.5D, 0.6D, 0.5D);
-        matrix.scale(0.94F, 0.80F, 0.94F);
+        matrix.scale(0.80F, 0.80F, 0.80F);
         switch (tile.getCachedState().get(HorizontalFacingBlock.FACING)) {
             case WEST, EAST -> this.rotateItem(matrix, 180, 90f, -45f); // default values
             case NORTH, SOUTH -> this.rotateItem(matrix, 180, 180f, -45f);

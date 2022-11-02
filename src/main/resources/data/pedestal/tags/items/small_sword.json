@@ -48,6 +48,10 @@
     {
       "id": "mcdw:dagger_soul_knife",
       "required": false
+    },
+    {
+      "id": "mcdw:sword_cutlass",
+      "required": false
     }
   ]
 }

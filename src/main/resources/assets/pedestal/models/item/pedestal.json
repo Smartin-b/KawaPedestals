@@ -1,4 +1,6 @@
 {
-  "parent": "pedestal:block/pedestal"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "pedestal:item/pedestal"
+  }
 }
-

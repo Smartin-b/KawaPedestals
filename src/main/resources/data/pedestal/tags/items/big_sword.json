@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     {
-      "id": "minecraft:netherite_sword",
-      "required": false
-    },
-    {
       "id": "mcdw:sword_obsidian_claymore",
       "required": false
     },
@@ -14,11 +10,7 @@
       "required": false
     },
     {
-      "id": "mcdw:sword_dancers_sword",
-      "required": false
-    },
-    {
-      "id": "mcdw:sword_frostslayer",
+      "id": "mcdw:sword_frost_slayer",
       "required": false
     }
   ]

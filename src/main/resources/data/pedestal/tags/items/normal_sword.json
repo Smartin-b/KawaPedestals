@@ -66,7 +66,7 @@
       "required": false
     },
     {
-      "id": "mcdw:spear_fortune_spear",
+      "id": "mcdw:spear_fortune",
       "required": false
     },
     {
@@ -95,10 +95,6 @@
     },
     {
       "id": "mcdw:sword_coral_blade",
-      "required": false
-    },
-    {
-      "id": "mcdw:sword_cutlass",
       "required": false
     },
     {
@@ -159,6 +155,10 @@
     },
     {
       "id": "mcdw:sword_sponge_striker",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_dancers_sword",
       "required": false
     }
   ]

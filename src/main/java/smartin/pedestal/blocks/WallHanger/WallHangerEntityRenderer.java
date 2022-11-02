@@ -34,7 +34,7 @@ public class WallHangerEntityRenderer implements BlockEntityRenderer<WallHangerE
         ItemRenderer renderer = MinecraftClient.getInstance().getItemRenderer();
         matrix.translate(0.0D, 4d/16D, 0.0D);
         matrix.push();
-        matrix.scale(0.94F, 0.80F, 0.94F);
+        matrix.scale(0.80F, 0.80F, 0.80F);
         switch (tile.getCachedState().get(HorizontalFacingBlock.FACING)) {
             case WEST :
                 matrix.translate(1.0D, 0.6D, 0.5D);

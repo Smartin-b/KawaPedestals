@@ -1,4 +1,3 @@
 {
-  "parent": "pedestal:block/pedestal"
+  "parent": "pedestal:block/wall_hanger"
 }
-
