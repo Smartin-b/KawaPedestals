@@ -28,6 +28,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
+import smartin.pedestal.ModTags;
 
 public class WallHanger extends Block implements BlockEntityProvider,Waterloggable {
 
@@ -130,10 +131,11 @@ public class WallHanger extends Block implements BlockEntityProvider,Waterloggab
                 }
             } else {
                 ItemStack stack = player.getStackInHand(hand);
+                boolean isSword = stack.isIn(ModTags.INVERTED_SWORD) || stack.isIn(ModTags.WALL_HANGER);
 
                 if (hand == Hand.MAIN_HAND) {
                     boolean isDisplayEmpty = displayTile.getWeapon().isEmpty();
-                    if (isDisplayEmpty) {
+                    if (isDisplayEmpty && isSword) {
                         ItemStack copy = stack.copy();
                         displayTile.setWeapon(copy);
                         stack.decrement(1);
@@ -153,7 +155,6 @@ public class WallHanger extends Block implements BlockEntityProvider,Waterloggab
     private void DropItems(WorldAccess world,BlockPos pos){
         if(world.getBlockEntity(pos) instanceof WallHangerEntity entity && world instanceof ServerWorld serverWorld){
             world.spawnEntity(new ItemEntity(serverWorld, pos.getX(),     pos.getY(),     pos.getZ(),     entity.getWeapon().copy()));
-            world.spawnEntity(new ItemEntity(serverWorld, pos.getX(),     pos.getY(),     pos.getZ(), Registry.ITEM.get(new Identifier("pedestal:wall_hanger")).getDefaultStack()));
         }
     }
 

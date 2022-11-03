@@ -1,0 +1,229 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "minecraft:wooden_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:stone_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:iron_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:golden_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:diamond_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:netherite_sword",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_anchor",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_encrusted_anchor",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_chill_gale_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_resolute_tempest_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_glaive",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_grave_bane",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_venom_glaive",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_truthseeker",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_spear",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_whispering_spear",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_fortune",
+      "required": false
+    },
+    {
+      "id": "mcdw:staff_battlestaff",
+      "required": false
+    },
+    {
+      "id": "mcdw:staff_battlestaff_of_terror",
+      "required": false
+    },
+    {
+      "id": "mcdw:staff_growing_staff",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_beestinger",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_broadsword",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_broken_sawblade",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_coral_blade",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_claymore",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_dark_katana",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_diamond_sword_var",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_freezing_foil",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_great_axeblade",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_hawkbrand",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_heartstealer",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_iron_sword_var",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_katana",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_masters_katana",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_mechanized_sawblade",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_nameless_blade",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_rapier",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_sinister",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_sponge_striker",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_dancers_sword",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_shear_dagger",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_backstabber",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_dagger",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_fangs_of_frost",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_moon",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_swift_striker",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_the_beginning",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_the_end",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_void_touched_blade",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_tempest_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_eternal_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:dagger_soul_knife",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_cutlass",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_obsidian_claymore",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_the_starless_night",
+      "required": false
+    },
+    {
+      "id": "mcdw:sword_frost_slayer",
+      "required": false
+    }
+  ]
+}

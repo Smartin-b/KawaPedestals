@@ -32,27 +32,26 @@ public class WallHangerEntityRenderer implements BlockEntityRenderer<WallHangerE
 
     public void renderItem(WallHangerEntity tile, ItemStack stack, float partialTicks, MatrixStack matrix, VertexConsumerProvider buffer, int combinedLight, int combinedOverlay) {
         ItemRenderer renderer = MinecraftClient.getInstance().getItemRenderer();
-        matrix.translate(0.0D, 4d/16D, 0.0D);
         matrix.push();
-        matrix.scale(0.80F, 0.80F, 0.80F);
         switch (tile.getCachedState().get(HorizontalFacingBlock.FACING)) {
             case WEST :
-                matrix.translate(1.0D, 0.6D, 0.5D);
+                matrix.translate(15D/16D, 0.65D, 0.5D);
                 this.rotateItem(matrix, 180, 90f, -45f);
                 break;
             case EAST :
-                matrix.translate(1d/16D, 0.6D, 0.5D);
+                matrix.translate(1D/16D, 0.65D, 0.5D);
                 this.rotateItem(matrix, 180, 90f, -45f);
                 break;
             case NORTH :
-                matrix.translate(0.5D, 0.6D, 1.0D);
+                matrix.translate(0.5D, 0.65D, 15d/16D);
                 this.rotateItem(matrix, 180, 180f, -45f);
                 break;
             case SOUTH :
-                matrix.translate(0.5D, 0.6D, 1d/16D);
+                matrix.translate(0.5D, 0.65D, 1d/16D);
                 this.rotateItem(matrix, 180, 180f, -45f);
                 break;
         }
+        matrix.scale(0.80F, 0.80F, 0.80F);
         if(stack.isIn(ModTags.INVERTED_SWORD))
             this.rotateItem(matrix,0,0,180);
         renderer.renderItem(stack, ModelTransformation.Mode.FIXED, combinedLight, combinedOverlay, matrix, buffer, 1);

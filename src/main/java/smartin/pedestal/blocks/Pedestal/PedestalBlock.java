@@ -83,7 +83,6 @@ public class PedestalBlock extends Block implements BlockEntityProvider ,Waterlo
     private void DropItems(WorldAccess world,BlockPos pos){
         if(world.getBlockEntity(pos) instanceof PedestalBlockEntity entity && world instanceof ServerWorld serverWorld){
             world.spawnEntity(new ItemEntity(serverWorld, pos.getX(),     pos.getY(),     pos.getZ(),     entity.getWeapon().copy()));
-            world.spawnEntity(new ItemEntity(serverWorld, pos.getX(),     pos.getY(),     pos.getZ(), Registry.ITEM.get(new Identifier("pedestal:pedestal")).getDefaultStack()));
         }
     }
 
