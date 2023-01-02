@@ -160,6 +160,94 @@
     {
       "id": "mcdw:sword_dancers_sword",
       "required": false
+    },
+    {
+      "id": "medievalweapons:golden_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:iron_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:stone_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:diamond_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:netherite_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:thallasium_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:nether_ruby_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:nether_ruby_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:cincinnasite_diamond_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:pendorite_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:wooden_ninjato",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:stone_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:wooden_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:iron_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:pendorite_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:cincinnasite_diamond_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:cincinnasite_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:nether_ruby_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:thallasium_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:netherite_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:diamond_long_sword",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:golden_long_sword",
+      "required": false
     }
   ]
 }

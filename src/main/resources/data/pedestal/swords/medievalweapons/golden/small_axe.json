@@ -1,0 +1,8 @@
+{
+  "id": "medievalweapons:golden_small_axe",
+  "pedestal": {
+    "rotation": [ 0, 0, 0 ],
+    "translation": [ 0, -0.2, 0],
+    "scale":[ 1.0, 1.0, 1.0 ]
+  }
+}

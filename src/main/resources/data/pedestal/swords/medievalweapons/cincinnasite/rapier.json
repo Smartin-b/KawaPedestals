@@ -1,0 +1,8 @@
+{
+  "id": "medievalweapons:cincinnasite_rapier",
+  "pedestal": {
+    "rotation": [ 90, 0, 0 ],
+    "translation": [ 0, 0, 0],
+    "scale":[ 1.0, 1.0, 1.0 ]
+  }
+}

@@ -52,6 +52,51 @@
     {
       "id": "mcdw:sword_cutlass",
       "required": false
+    },
+
+    {
+      "id": "medievalweapons:wooden_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:stone_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:iron_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:golden_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:diamond_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:netherite_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:thallasium_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:nether_ruby_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:cincinnasite_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:cincinnasite_diamond_dagger",
+      "required": false
+    },
+    {
+      "id": "medievalweapons:pendorite_dagger",
+      "required": false
     }
   ]
 }
