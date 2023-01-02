@@ -9,7 +9,6 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
-import smartin.pedestal.Pedestal;
 import smartin.pedestal.blocks.ModBlocks;
 
 public class WallHangerEntity extends BlockEntity {

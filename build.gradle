@@ -23,6 +23,9 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        url = uri("https://storage.googleapis.com/devan-maven/")
+    }
     repositories {
         flatDir{
             dirs 'localdeps'
@@ -40,6 +43,8 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "curse.maven:mcdw-407311:3971563"
+    modImplementation("net.devtech:arrp:0.6.4")//lib for medival weapons
+    modImplementation "curse.maven:medivalweapons-411400:4088548"
     modImplementation "curse.maven:cloth-348521:4054728"
     modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}"
     // Enchant Giver

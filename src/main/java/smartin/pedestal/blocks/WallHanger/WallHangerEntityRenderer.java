@@ -13,7 +13,10 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Quaternion;
 import net.minecraft.util.math.Vec3f;
+import net.minecraft.util.registry.Registry;
 import smartin.pedestal.ModTags;
+import smartin.pedestal.Pedestal;
+import smartin.pedestal.dataReader.SwordJson;
 
 @Environment(EnvType.CLIENT)
 public class WallHangerEntityRenderer implements BlockEntityRenderer<WallHangerEntity> {
@@ -54,6 +57,12 @@ public class WallHangerEntityRenderer implements BlockEntityRenderer<WallHangerE
         matrix.scale(0.80F, 0.80F, 0.80F);
         if(stack.isIn(ModTags.INVERTED_SWORD))
             this.rotateItem(matrix,0,0,180);
+        SwordJson.TranslationObject translationObject = Pedestal.SwordJsons.get("hanger").get(Registry.ITEM.getId(stack.getItem()).toString());
+        if(translationObject !=null){
+            matrix.translate(translationObject.translation[0],translationObject.translation[1],translationObject.translation[2]);
+            matrix.scale(translationObject.scale[0].floatValue(),translationObject.scale[1].floatValue(),translationObject.scale[2].floatValue());
+            this.rotateItem(matrix,translationObject.rotation[0].floatValue(),translationObject.rotation[1].floatValue(),translationObject.rotation[2].floatValue());
+        }
         renderer.renderItem(stack, ModelTransformation.Mode.FIXED, combinedLight, combinedOverlay, matrix, buffer, 1);
 
         matrix.pop();

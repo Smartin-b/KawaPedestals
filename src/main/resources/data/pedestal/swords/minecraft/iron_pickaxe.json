@@ -1,0 +1,8 @@
+{
+  "id": "minecraft:iron_pickaxe",
+  "pedestal": {
+    "rotation": [ 30, 45, 0 ],
+    "translation": [ 0, 0, 0],
+    "scale":[ 0.625, 0.625, 0.625 ]
+  }
+}

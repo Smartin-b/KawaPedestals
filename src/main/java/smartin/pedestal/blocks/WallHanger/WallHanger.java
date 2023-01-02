@@ -29,6 +29,7 @@ import net.minecraft.world.WorldView;
 import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
 import smartin.pedestal.ModTags;
+import smartin.pedestal.Pedestal;
 
 public class WallHanger extends Block implements BlockEntityProvider,Waterloggable {
 
@@ -65,9 +66,18 @@ public class WallHanger extends Block implements BlockEntityProvider,Waterloggab
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState()
-                .with(Properties.HORIZONTAL_FACING, ctx.getSide())
-                .with(WATERLOGGED, ctx.getWorld().getFluidState(ctx.getBlockPos()).getFluid() == Fluids.WATER);
+        Direction[] placementDir = ctx.getPlacementDirections();
+        for(Direction dir : placementDir){
+            if(dir.getAxis().isHorizontal()){
+                Pedestal.LOGGER.info("PLACINGTRY");
+                Pedestal.LOGGER.info(dir);
+                return (BlockState)this.getDefaultState()
+                        .with(Properties.HORIZONTAL_FACING, dir.getOpposite())
+                        .with(WATERLOGGED, ctx.getWorld().getFluidState(ctx.getBlockPos()).getFluid() == Fluids.WATER);
+            }
+        }
+        //return Blocks.AIR.getDefaultState();
+        return null;
     }
 
     @Nullable
@@ -121,35 +131,29 @@ public class WallHanger extends Block implements BlockEntityProvider,Waterloggab
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         BlockEntity te = world.getBlockEntity(pos);
-        te.markDirty();
-        if (!world.isClient && te instanceof WallHangerEntity displayTile) {
-            if (player.isSneaking()) {
-                if (player.getActiveHand() == Hand.MAIN_HAND && player.getMainHandStack().isEmpty()) {
-                    final ItemStack toDrop = displayTile.getWeapon().copy();
-                    displayTile.setWeapon(ItemStack.EMPTY);
-                    player.giveItemStack(toDrop);
-                }
-            } else {
-                ItemStack stack = player.getStackInHand(hand);
-                boolean isSword = stack.isIn(ModTags.INVERTED_SWORD) || stack.isIn(ModTags.WALL_HANGER);
-
-                if (hand == Hand.MAIN_HAND) {
-                    boolean isDisplayEmpty = displayTile.getWeapon().isEmpty();
-                    if (isDisplayEmpty && isSword) {
-                        ItemStack copy = stack.copy();
-                        displayTile.setWeapon(copy);
-                        stack.decrement(1);
-                        world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
-                        return ActionResult.SUCCESS;
-                    }
-                    if (!isDisplayEmpty && stack.isEmpty()) {
-                        world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
-                    }
-                }
+        if (!world.isClient && te instanceof WallHangerEntity displayTile &&hand == Hand.MAIN_HAND) {
+            ItemStack inHand = player.getMainHandStack();
+            if(isAllowed(inHand) ||inHand.isEmpty()){
+                ItemStack inPedestal = displayTile.getWeapon().copy();
+                inHand = player.getMainHandStack();
+                ItemStack toPedestal = inHand.copy();
+                toPedestal.setCount(1);
+                displayTile.setWeapon(toPedestal);
+                inHand.decrement(1);
+                player.giveItemStack(inPedestal);
+                te.markDirty();
+                world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
+                return ActionResult.SUCCESS;
             }
         }
-        world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
         return ActionResult.PASS;
+    }
+
+    private boolean isAllowed(ItemStack stack){
+        if(Pedestal.SwordJsons.get("hanger").get(Registry.ITEM.getId(stack.getItem()).toString())!=null){
+            return true;
+        }
+        return stack.isIn(ModTags.INVERTED_SWORD) || stack.isIn(ModTags.WALL_HANGER);
     }
 
     private void DropItems(WorldAccess world,BlockPos pos){
