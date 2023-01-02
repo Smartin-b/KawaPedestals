@@ -40,11 +40,9 @@ public class Pedestal implements ModInitializer {
         ClientPlayNetworking.registerGlobalReceiver(Pedestal.DATAPACKET, (client, handler, buf, responseSender) -> {
             final String configjson = buf.readString();
             client.execute(() -> {
-                System.out.println("recieving"+configjson);
                 Gson gson = new Gson();
                 Type type = new TypeToken<Map<String, Map<String, SwordJson.TranslationObject>>>(){}.getType();
                 SwordJsons = gson.fromJson(configjson,type);
-                System.out.println(SwordJsons.size());
             });
         });
     }
@@ -60,7 +58,6 @@ public class Pedestal implements ModInitializer {
         PacketByteBuf buf = PacketByteBufs.create();
         Gson gson = new Gson();
         buf.writeString(gson.toJson(SwordJsons));
-        System.out.println("sending"+gson.toJson(SwordJsons));
         ServerPlayNetworking.send(player, Pedestal.DATAPACKET, buf);
     }
 }
