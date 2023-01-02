@@ -2,10 +2,12 @@
   "schemaVersion": 1,
   "id": "pedestal",
   "version": "${version}",
-  "name": "Pedestal",
+  "name": "Kawa`s Pedestals",
   "description": "A simple Pedestal for Kawa",
   "authors": [
-    "Smartin"
+    "Smartin",
+    "KawataroTB",
+    "nytifx"
   ],
   "contact": {},
   "license": "MIT",
